@@ -1,9 +1,9 @@
-/* Global Styles */
+/* GLOBAL STYLES */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f7f7f7;
+  background-color: #f9f9f9;
   color: #333;
   scroll-behavior: smooth;
 }
@@ -11,8 +11,8 @@ body {
 header {
   background: #0073e6;
   color: white;
-  padding: 40px 20px;
   text-align: center;
+  padding: 40px 20px;
 }
 
 header h1 {
@@ -21,91 +21,96 @@ header h1 {
 }
 
 nav {
-  background: #333;
+  background: #222;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav a {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 nav a:hover {
   background: #444;
 }
 
+/* SECTION WRAPPER */
 section {
-  padding: 40px 20px;
   max-width: 900px;
-  margin: auto;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-/* About Section */
+/* ABOUT SECTION */
 #about {
   text-align: center;
 }
 
 #about img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 100px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
   border: 4px solid #0073e6;
-  margin-bottom: 15px;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
-/* Projects */
+/* PROJECTS */
 #projects h2 {
   text-align: center;
 }
 
 #projects div {
   background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
   padding: 20px;
-  border-radius: 12px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #projects div:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 #projects img {
   width: 100%;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-/* Resume */
+/* RESUME */
 #resume {
   text-align: center;
 }
 
 #resume a {
+  padding: 10px 20px;
   background: #0073e6;
   color: white;
-  padding: 10px 18px;
   text-decoration: none;
   border-radius: 6px;
-  transition: background 0.3s ease;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
 #resume a:hover {
   background: #005bb5;
 }
 
-/* Contact */
+/* CONTACT */
 #contact p {
   text-align: center;
-  font-size: 1.05em;
-  margin: 8px 0;
+  font-size: 1.1em;
+  margin: 10px 0;
 }
 
 #contact a {
@@ -117,19 +122,19 @@ section {
   text-decoration: underline;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  text-align: center;
-  padding: 16px;
   background: #222;
   color: white;
+  text-align: center;
+  padding: 15px;
   font-size: 0.9em;
 }
 
-/* Responsive Design */
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {
   header h1 {
-    font-size: 1.8em;
+    font-size: 1.7em;
   }
 
   nav a {
@@ -138,12 +143,12 @@ footer {
   }
 
   #about img {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
   }
 
-  #projects div {
-    padding: 15px;
+  section {
+    padding: 20px 10px;
   }
 }
 
